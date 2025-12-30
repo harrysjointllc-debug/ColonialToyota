@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Colonial Toyota | Trade-In, Finance, Service</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">CT</span>
+          <div>
+            <p class="brand-name">Colonial Toyota</p>
+            <p class="brand-tag">Trade • Finance • Service</p>
+          </div>
+        </div>
+        <nav class="topnav">
+          <a href="#trade-in">Trade-In</a>
+          <a href="#finance">Finance</a>
+          <a href="#service">Service</a>
+        </nav>
+        <button class="cta">Book a Visit</button>
+      </header>
+
+      <section class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">New England trusted since 1982</p>
+          <h1>Move up to your next Toyota with clarity and confidence.</h1>
+          <p class="lede">
+            Instant trade-in guidance, transparent finance tools, and service
+            scheduling in one smooth place.
+          </p>
+          <div class="hero-actions">
+            <button class="cta" data-scroll="trade-in">Start trade-in</button>
+            <button class="ghost" data-scroll="finance">Estimate payment</button>
+          </div>
+          <div class="stats">
+            <div>
+              <p class="stat-value">12k+</p>
+              <p class="stat-label">Trade-ins evaluated</p>
+            </div>
+            <div>
+              <p class="stat-value">4.8★</p>
+              <p class="stat-label">Service rating</p>
+            </div>
+            <div>
+              <p class="stat-value">6 min</p>
+              <p class="stat-label">Avg. booking time</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <p class="card-title">Today at a glance</p>
+            <p class="card-sub">Live from Colonial Toyota</p>
+          </div>
+          <div class="hero-card-body">
+            <div class="card-row">
+              <span>Service openings</span>
+              <strong>14 slots</strong>
+            </div>
+            <div class="card-row">
+              <span>Trade-in range</span>
+              <strong>$3.2k – $24.5k</strong>
+            </div>
+            <div class="card-row">
+              <span>APR specials</span>
+              <strong>2.9% for 36 mo</strong>
+            </div>
+            <button class="cta full" data-scroll="service">Schedule service</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="trade-in" class="panel reveal">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Trade-in Studio</p>
+            <h2>Get a real-world estimate in minutes.</h2>
+            <p class="panel-copy">
+              Tell us about your current vehicle and we will surface a smart
+              range based on mileage, condition, and demand.
+            </p>
+          </div>
+          <div class="panel-badge">Powered by local market data</div>
+        </div>
+        <div class="panel-grid">
+          <form class="card" id="tradeForm">
+            <label>
+              Vehicle year
+              <input type="number" name="year" min="2000" max="2026" value="2019" />
+            </label>
+            <label>
+              Mileage
+              <input type="number" name="miles" min="0" value="52000" />
+            </label>
+            <label>
+              Condition
+              <select name="condition">
+                <option value="excellent">Excellent</option>
+                <option value="good" selected>Good</option>
+                <option value="fair">Fair</option>
+                <option value="needs-work">Needs work</option>
+              </select>
+            </label>
+            <label>
+              Demand score
+              <input type="range" name="demand" min="1" max="10" value="7" />
+            </label>
+            <button type="submit" class="cta">Estimate value</button>
+          </form>
+          <div class="card highlight" id="tradeResult">
+            <p class="eyebrow">Estimated range</p>
+            <h3>$14,800 – $17,100</h3>
+            <p class="panel-copy">
+              Bring your title and current mileage for a final appraisal. We
+              will match or beat verified offers.
+            </p>
+            <div class="pill-row">
+              <span class="pill">Instant offer</span>
+              <span class="pill">No obligation</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="finance" class="panel alt reveal">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Finance Lab</p>
+            <h2>See your monthly payment before you step in.</h2>
+            <p class="panel-copy">
+              Adjust price, trade-in, down payment, and APR to build the plan
+              that fits your driveway.
+            </p>
+          </div>
+          <div class="panel-badge">Transparent, no surprises</div>
+        </div>
+        <div class="panel-grid">
+          <form class="card" id="financeForm">
+            <label>
+              Vehicle price
+              <input type="number" name="price" min="10000" value="34500" />
+            </label>
+            <label>
+              Trade-in value
+              <input type="number" name="trade" min="0" value="15000" />
+            </label>
+            <label>
+              Down payment
+              <input type="number" name="down" min="0" value="3500" />
+            </label>
+            <label>
+              Term (months)
+              <select name="term">
+                <option value="36">36</option>
+                <option value="48">48</option>
+                <option value="60" selected>60</option>
+                <option value="72">72</option>
+              </select>
+            </label>
+            <label>
+              APR (%)
+              <input type="number" name="apr" min="0" step="0.1" value="4.2" />
+            </label>
+            <button type="submit" class="cta">Calculate</button>
+          </form>
+          <div class="card highlight" id="financeResult">
+            <p class="eyebrow">Estimated payment</p>
+            <h3>$472 / month</h3>
+            <div class="breakdown">
+              <div>
+                <span>Amount financed</span>
+                <strong>$16,000</strong>
+              </div>
+              <div>
+                <span>Total interest</span>
+                <strong>$2,340</strong>
+              </div>
+              <div>
+                <span>Total cost</span>
+                <strong>$18,340</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="service" class="panel reveal">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Service Studio</p>
+            <h2>Book service with a dedicated advisor.</h2>
+            <p class="panel-copy">
+              Choose the services you need, pick a time, and we will confirm
+              instantly.
+            </p>
+          </div>
+          <div class="panel-badge">Pick-up & loaner options</div>
+        </div>
+        <div class="panel-grid">
+          <form class="card" id="serviceForm">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Jordan Rivera" required />
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="phone" placeholder="(555) 394-8821" required />
+            </label>
+            <label>
+              Service type
+              <select name="service">
+                <option value="maintenance">Maintenance + Inspection</option>
+                <option value="brakes">Brakes & Rotors</option>
+                <option value="tires">Tires & Alignment</option>
+                <option value="diagnostic">Diagnostic</option>
+              </select>
+            </label>
+            <label>
+              Preferred date
+              <input type="date" name="date" required />
+            </label>
+            <label>
+              Preferred time
+              <input type="time" name="time" required />
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="loaner" />
+              Need a loaner or shuttle
+            </label>
+            <button type="submit" class="cta">Reserve slot</button>
+          </form>
+          <div class="card highlight" id="serviceResult">
+            <p class="eyebrow">Your appointment</p>
+            <h3>Ready to confirm</h3>
+            <p class="panel-copy">
+              We will text you within 5 minutes to lock in your advisor and
+              arrival instructions.
+            </p>
+            <ul class="appointment-list">
+              <li>Advisor: Casey N.</li>
+              <li>Location: 123 Colonial Way, Milford</li>
+              <li>Hours: Mon–Sat, 7:30a–6p</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div>
+          <p class="brand-name">Colonial Toyota</p>
+          <p class="panel-copy">
+            Drive easy with transparent trade-ins, finance clarity, and service
+            care.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="#trade-in">Trade-in</a>
+          <a href="#finance">Finance</a>
+          <a href="#service">Service</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
